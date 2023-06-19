@@ -28,7 +28,7 @@
       titleBox={"Moi en quelque mots : "}
       txtBox={allTxtSect[0]}
       bgColor={""}
-      marginFirst={"40vh 3vw 0 48.5% "}
+      marginFirst={"40vh 3vw 0 "}
 	  idSect={'moi'}
     />
     <SectionInfo
@@ -37,6 +37,7 @@
       bgColor={"#FFBE5C"}
       marginFirst={""}
 	  idSect={'portfolio'}
+	  cardPresence={true}
     />
   </div>
 </section>
@@ -52,6 +53,9 @@
   .home__list{
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	width:calc(52vw - 3px);
+	position: relative;
+	margin: 0 0 0 45vw;
+	
   }
 </style>

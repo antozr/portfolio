@@ -12,11 +12,12 @@
 <style>
 	/* styles go here */
     .home__colGauche{
-        width: 45%;
+        width: 45vw;
         height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
+        border-right: 3px solid #000;
     }
     .home__img{
         width: 100%;
