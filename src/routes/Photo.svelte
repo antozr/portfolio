@@ -12,7 +12,7 @@
 <style>
 	/* styles go here */
     .home__colGauche{
-        width: 45vw;
+        width: 35vw;
         height: 100vh;
         position: fixed;
         top: 0;

@@ -53,9 +53,9 @@
   .home__list{
 	display: flex;
 	flex-direction: column;
-	width:calc(52vw - 3px);
+	width:calc(65vw - 3px);
 	position: relative;
-	margin: 0 0 0 45vw;
+	margin: 0 0 0 35vw;
 	
   }
 </style>

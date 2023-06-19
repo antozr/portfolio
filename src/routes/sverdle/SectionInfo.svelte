@@ -17,16 +17,19 @@
       name: "TattooExplore / TFE",
       sub: "TFE - HEAJ",
       img: TFEImg,
+      link: 'http://antoni-dumont.be/projets/tfe/'
     },
     {
       name: "Edie / landing",
       sub: "Défis  - Devchallenges.io",
       img: EdieImg,
+      link:'https://www.edie.devchallenges.io.antoni-dumont.be/'
     },
     {
       name: "Discord clone",
       sub: "Perso  ",
       img: discordImg,
+      link : 'https://discord-clone-926b5.web.app/'
     },
   ];
 </script>
@@ -51,8 +54,12 @@
           titleCard={cards.name}
           Subtitle={cards.sub}
           imgCard={cards.img}
+          linkProject={cards.link}
         />
       {/each}
+      <div class="sect__boxCard">
+        <CardProject titleCard={""} Subtitle={''} imgCard={TFEImg} cardWith={'40vw'} />
+      </div>
     {/if}
   </div>
 </section>
@@ -61,7 +68,7 @@
   /* styles go here */
   .sect {
     min-height: 50vh;
-    width: 50vw;
+    width: 90%;
     background-color: #fff3e1;
     padding: 20vh 3vw;
     /* padding: 0 3vw; */
@@ -70,15 +77,25 @@
   .sect__cardList {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
     flex-wrap: wrap;
     column-gap: 1vw;
     margin: 103px 0 0 calc(-3vw + 0px);
     width: calc(100% + 6vw);
+    
+  }
+  .sect__boxCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 90px 0 0 0;
   }
   .sect__title {
     font-family: var(--font-title);
     font-size: 4cqi;
-    text-align: end;
+    
     margin: 0 0 51px 0;
   }
 
@@ -86,5 +103,7 @@
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 160%;
+    width: 70ch;
+    
   }
 </style>

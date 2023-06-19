@@ -28,14 +28,14 @@
 <style>
 
 .head{
-	width: 55vw;
+	width: calc(65vw - 3px);
 	height: 80px;
 	background-color: #B9B1A6;
 	border-bottom: 3px solid #000;
 	position: fixed;
 	top: 0;
 	z-index: 4;
-	left: calc(45vw - 3px);
+	left: calc(35vw + 0px);
 }
 .head__list{
 	display: flex;

@@ -4,10 +4,15 @@ export let titleCard
 export let Subtitle
 export let imgCard
 export let cardWith
+export let linkProject 
+
+function viewProject(){
+    window.open(linkProject);
+}
 
 </script>
 
-<div class="card" style:background-image={`url("${imgCard}")`} style:width={cardWith}>
+<div class="card" style:background-image={`url("${imgCard}")`} style:width={cardWith} on:click={viewProject} aria-label="redirection vers le projet">
     <div class="card__box">
         <h3 class="sect__title--3 sect__title">
             {titleCard}
@@ -38,8 +43,9 @@ export let cardWith
     &:hover{
         
         transition: 0.4s;
-        border-radius: 0 30px 0 0 ;
+        border-radius: 30px  30px 0  ;
         transform: translateY(30px);
+        
 
         &>div{
             background-color: #FFBE5C;
