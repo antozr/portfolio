@@ -9,6 +9,7 @@
   let allTxtSect = [
     "Bien le bonjour 👋, je suis un jeune diplômé en web design / développement front. \n \n Je me passionne pour le développement depuis quelques années, et la résolution des problèmes que je peux rencontrer dans le code et comment je peux les résoudre. Je jongle avec le .js et les différents frameworks pour pouvoir créer des projets avec un design et une expérience utilisateurs aux mieux.",
     "Voici quelques projets que j’ai réalisés dans un cadre scolaire ou non, et avec des objectifs différents.",
+    "Voici une visualisation des différents langages, logiciels… Que j’ai appris à utiliser au cours de mes différents projets.",
     "",
   ];
 </script>

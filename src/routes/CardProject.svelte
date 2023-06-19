@@ -26,7 +26,7 @@ function viewProject(){
 <style lang="scss">
 
 .card{
-    background-position: center;
+    background-position:top;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -35,8 +35,8 @@ function viewProject(){
    
     //border: 2px solid #000;
     aspect-ratio: 2/3;
-    width: calc(33% - 1vw);
-    height: 480px;
+    width: 100%;
+    height: 280px;
     cursor: pointer;
     transition: .2s;
 
@@ -80,4 +80,16 @@ function viewProject(){
     width: 100%;
 }
 
+@media(min-width:600px){
+    .card{
+
+   
+    //border: 2px solid #000;
+    aspect-ratio: 2/3;
+    width: calc(33% - 1vw);
+    height: 480px;
+
+    
+}
+}
 </style>

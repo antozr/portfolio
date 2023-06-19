@@ -3,6 +3,7 @@
   import TFEImg from "../../lib/images/cardImg1.jpg";
   import EdieImg from "../../lib/images/cardImg2.jpg";
   import discordImg from "../../lib/images/cardImg3.jpg";
+  import archeoImg from "../../lib/images/archeoCard.jpg";
 
   // logic goes here
   export let titleBox;
@@ -14,10 +15,10 @@
 
   let allCardInfo = [
     {
-      name: "TattooExplore / TFE",
-      sub: "TFE - HEAJ",
-      img: TFEImg,
-      link: 'http://antoni-dumont.be/projets/tfe/'
+      name: "ARCHEO ",
+      sub: "24h - webbasement",
+      img: archeoImg,
+      link: 'http://antoni-dumont.be/projets/wb/'
     },
     {
       name: "Edie / landing",
@@ -58,7 +59,7 @@
         />
       {/each}
       <div class="sect__boxCard">
-        <CardProject titleCard={""} Subtitle={''} imgCard={TFEImg} cardWith={'40vw'} />
+        <CardProject titleCard={"TattooExplore / TFE "} Subtitle={'TFE - HEAJ'} imgCard={TFEImg} cardWith={window.innerWidth <= 600 ? '80vw': '40vw'} linkProject={'http://antoni-dumont.be/projets/tfe'} />
       </div>
     {/if}
   </div>
@@ -81,6 +82,7 @@
     overflow: hidden;
     flex-wrap: wrap;
     column-gap: 1vw;
+    row-gap: 1vh;
     margin: 103px 0 0 calc(-3vw + 0px);
     width: calc(100% + 6vw);
     
@@ -110,7 +112,7 @@
 
   @media(min-width: 600px){
     .sect {
-    width: 90%;
+    width: 100%;
     padding: 20vh 3vw;
     /* padding: 0 3vw; */
   }
@@ -121,6 +123,13 @@
   .sect__title {
     font-size: 4cqi;
 
+  }
+  .sect__cardList {
+
+    column-gap: 1vw;
+    margin: 103px 0 0 calc(-3vw + 0px);
+    width: calc(100% + 6vw);
+    
   }
   }
 </style>

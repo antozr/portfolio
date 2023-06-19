@@ -25,16 +25,18 @@
     top: 0;
     left: 0;
     border-right: 3px solid #000;
+    overflow: hidden;
   }
   .home__boxName {
     width: 90%;
-    height: 30%;
+    height: 100%;
     position: relative;
     z-index: 4;
-    left: 38px;
+    left: 18px;
     bottom: 55%;
     text-align: end;
     font-family: var(--font-title);
+    
   }
   .sect__title {
     font-size: 20cqw;
@@ -55,6 +57,7 @@
       width: 35vw;
       height: 100vh;
       position: fixed;
+      overflow: hidden;
 
     }
     .sect__title {

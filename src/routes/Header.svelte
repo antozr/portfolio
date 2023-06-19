@@ -28,12 +28,12 @@
 <style>
 
 .head{
-	width: calc(65vw - 3px);
+	width: 100%;
 	height: 80px;
 	background-color: #B9B1A6;
 	border-bottom: 3px solid #000;
 	position: fixed;
-	top: 0;
+	bottom: 0;
 	z-index: 4;
 	left: calc(35vw + 0px);
 }
@@ -72,5 +72,16 @@
 .head__link--active{
 	color: blue;
 	font-size: 800;
+}
+
+@media(min-width: 600px){
+	.head{
+	width: calc(65vw - 3px);
+	height: 80px;
+	position: fixed;
+	top: 0;
+	bottom: auto;
+	left: calc(35vw + 0px);
+}
 }
 </style>
