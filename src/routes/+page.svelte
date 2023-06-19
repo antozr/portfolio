@@ -9,7 +9,7 @@
   let allTxtSect = [
     "Bien le bonjour 👋, je suis un jeune diplômé en web design / développement front. \n \n Je me passionne pour le développement depuis quelques années, et la résolution des problèmes que je peux rencontrer dans le code et comment je peux les résoudre. Je jongle avec le .js et les différents frameworks pour pouvoir créer des projets avec un design et une expérience utilisateurs aux mieux.",
     "Voici quelques projets que j’ai réalisés dans un cadre scolaire ou non, et avec des objectifs différents.",
-	'',
+    "",
   ];
 </script>
 
@@ -29,31 +29,31 @@
       txtBox={allTxtSect[0]}
       bgColor={""}
       marginFirst={"40vh 3vw 0 "}
-	  idSect={'moi'}
+      idSect={"moi"}
     />
     <SectionInfo
       titleBox={"Mon portfolio :"}
       txtBox={allTxtSect[1]}
       bgColor={"#FFBE5C"}
       marginFirst={""}
-	  idSect={'portfolio'}
-	  cardPresence={true}
+      idSect={"portfolio"}
+      cardPresence={true}
     />
     <SectionInfo
-      titleBox={"Les techs que j’emploie :"}
+      titleBox={"Les techs :"}
       txtBox={allTxtSect[1]}
       bgColor={""}
       marginFirst={""}
-	  idSect={'techs'}
-	  cardPresence={true}
+      idSect={"techs"}
+      cardPresence={""}
     />
     <SectionInfo
       titleBox={"Me contacter :"}
       txtBox={allTxtSect[1]}
       bgColor={"#FFBE5C"}
       marginFirst={""}
-	  idSect={'portfolio'}
-	  cardPresence={true}
+      idSect={"portfolio"}
+      cardPresence={""}
     />
   </div>
 </section>
@@ -61,17 +61,30 @@
 <style>
   .home {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .home__list {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    margin: 0 0 0 0vw;
+  }
+
+  @media(min-width: 600px){
+    .home {
+    display: flex;
     flex-direction: row;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
   }
-  .home__list{
-	display: flex;
-	flex-direction: column;
-	width:calc(65vw - 3px);
-	position: relative;
-	margin: 0 0 0 35vw;
-	
+  .home__list {
+    width: calc(65vw - 3px);
+    margin: 0 0 0 35vw;
+  }
   }
 </style>

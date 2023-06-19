@@ -68,7 +68,7 @@
   /* styles go here */
   .sect {
     min-height: 50vh;
-    width: 90%;
+    width: auto;
     background-color: #fff3e1;
     padding: 20vh 3vw;
     /* padding: 0 3vw; */
@@ -94,7 +94,7 @@
   }
   .sect__title {
     font-family: var(--font-title);
-    font-size: 4cqi;
+    font-size: 10cqi;
     
     margin: 0 0 51px 0;
   }
@@ -103,7 +103,24 @@
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 160%;
+    
+    padding: 0 3vw;
+    
+  }
+
+  @media(min-width: 600px){
+    .sect {
+    width: 90%;
+    padding: 20vh 3vw;
+    /* padding: 0 3vw; */
+  }
+  .sect__txt {
     width: 70ch;
     
+  }
+  .sect__title {
+    font-size: 4cqi;
+
+  }
   }
 </style>
