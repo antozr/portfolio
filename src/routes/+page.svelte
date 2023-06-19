@@ -39,6 +39,22 @@
 	  idSect={'portfolio'}
 	  cardPresence={true}
     />
+    <SectionInfo
+      titleBox={"Les techs que j’emploie :"}
+      txtBox={allTxtSect[1]}
+      bgColor={""}
+      marginFirst={""}
+	  idSect={'techs'}
+	  cardPresence={true}
+    />
+    <SectionInfo
+      titleBox={"Me contacter :"}
+      txtBox={allTxtSect[1]}
+      bgColor={"#FFBE5C"}
+      marginFirst={""}
+	  idSect={'portfolio'}
+	  cardPresence={true}
+    />
   </div>
 </section>
 
