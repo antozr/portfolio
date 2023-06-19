@@ -19,7 +19,12 @@
   import phpLogo from  "../../lib/images/logo/php.svg";
   import deisgnLogo from  "../../lib/images/logo/design.svg";
   import adobeLogo from  "../../lib/images/logo/adobe.svg";
+  import wordpressLogo from  "../../lib/images/logo/wordpress-icon.svg";
 
+  import linkedin from  "../../lib/images/logo/linkedin-icon-2.svg";
+  import email from  "../../lib/images/logo/gmail-icon.svg";
+  import insta from  "../../lib/images/logo/instagram-2016-5.svg";
+  import githubLogo from  "../../lib/images/logo/github-icon-1.svg";
   // logic goes here
   export let titleBox;
   export let txtBox;
@@ -28,6 +33,7 @@
   export let idSect;
   export let cardPresence;
   export let techPresence;
+  export let contactPresence; 
 
   let allCardInfo = [
     {
@@ -96,8 +102,31 @@
   },{
     name: 'Adobe suite',
     img: adobeLogo
-  },
+  },{
+    name: 'Wordpress / Elementor',
+    img : wordpressLogo
+  }
 
+  ]
+
+  let allContactInfos = [
+    {
+      name : "antoni dumont",
+      link : "https://www.linkedin.com/in/antoni-dumont-2724ba251/",
+      logo : linkedin
+    },{
+      name: 'antonidwm@gmail.com',
+      link: 'mailto:antonidwm@gmail.com',
+      logo: email
+    },{
+      name: 'anto__dev',
+      link: 'https://www.instagram.com/anto__dev/',
+      logo : insta
+    }, {
+      name: 'antozr',
+      link: 'https://github.com/antozr',
+      logo: githubLogo
+    }
   ]
 </script>
 
@@ -141,7 +170,15 @@
 
   <div class="sect__techList">
     {#each allTechInfo as techs }
-      <TechItem nameLinkImg={techs.name} linkTechImg={techs.img} />
+      <TechItem nameLinkImg={techs.name} linkTechImg={techs.img} linkNav={''} />
+    {/each}
+  </div>
+  {/if}
+  {#if contactPresence === true}
+
+  <div class="sect__contatcList">
+    {#each allContactInfos as techs }
+      <TechItem nameLinkImg={techs.name} linkTechImg={techs.logo} linkNav={techs.link} />
     {/each}
   </div>
   {/if}
@@ -200,6 +237,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  .sect__contatcList{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+    row-gap: 1vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   @media(min-width: 600px){
     .sect {
@@ -231,5 +277,15 @@
     row-gap: 2vh;
     justify-content:center;
   }
+  .sect__contatcList{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.1vw;
+    row-gap: 1vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   }
 </style>
