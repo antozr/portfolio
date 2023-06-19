@@ -31,6 +31,7 @@
       bgColor={""}
       marginFirst={"40vh 3vw 0 "}
       idSect={"moi"}
+      techPresence={""}
     />
     <SectionInfo
       titleBox={"Mon portfolio :"}
@@ -39,6 +40,7 @@
       marginFirst={""}
       idSect={"portfolio"}
       cardPresence={true}
+      techPresence={"true"}
     />
     <SectionInfo
       titleBox={"Les techs :"}
@@ -47,6 +49,7 @@
       marginFirst={""}
       idSect={"techs"}
       cardPresence={""}
+      techPresence={true}
     />
     <SectionInfo
       titleBox={"Me contacter :"}
@@ -55,6 +58,7 @@
       marginFirst={""}
       idSect={"portfolio"}
       cardPresence={""}
+      techPresence={""}
     />
   </div>
 </section>

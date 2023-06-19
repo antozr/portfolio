@@ -4,6 +4,21 @@
   import EdieImg from "../../lib/images/cardImg2.jpg";
   import discordImg from "../../lib/images/cardImg3.jpg";
   import archeoImg from "../../lib/images/archeoCard.jpg";
+  import TechItem from "../TechItem.svelte";
+
+  import reactLogo from  "../../lib/images/logo/reactjs.svg";
+  import vueLogo from  "../../lib/images/logo/vue.svg";
+  import svelteLogo from  "../../lib/images/logo/svelte.svg";
+  import gitLogo from  "../../lib/images/logo/git.svg";
+  import jsLogo from  "../../lib/images/logo/logo-javascript 1.svg";
+  import reduxLogo from  "../../lib/images/logo/redux 1.svg";
+  import figmaLogo from  "../../lib/images/logo/figma.svg";
+  import fireLogo from  "../../lib/images/logo/firebase.svg";
+  import sassLogo from  "../../lib/images/logo/sass.svg";
+  import pyLogo from  "../../lib/images/logo/python.svg";
+  import phpLogo from  "../../lib/images/logo/php.svg";
+  import deisgnLogo from  "../../lib/images/logo/design.svg";
+  import adobeLogo from  "../../lib/images/logo/adobe.svg";
 
   // logic goes here
   export let titleBox;
@@ -12,6 +27,7 @@
   export let marginFirst;
   export let idSect;
   export let cardPresence;
+  export let techPresence;
 
   let allCardInfo = [
     {
@@ -33,6 +49,56 @@
       link : 'https://discord-clone-926b5.web.app/'
     },
   ];
+
+  let allTechInfo = [
+    {
+    name: 'React.js',
+    img: reactLogo
+  },
+  {
+    name: 'Vue',
+    img: vueLogo
+  },
+  {
+    name: 'Svelte.js',
+    img: svelteLogo
+  },{
+    name: '.js',
+    img: jsLogo
+  },
+  {
+    name: 'SASS /SCSS',
+    img: sassLogo
+  },{
+    name: 'Git',
+    img: gitLogo
+  },
+  
+  {
+    name: 'Redux',
+    img: reduxLogo
+  },
+  {
+    name: 'Firebase',
+    img: fireLogo
+  },{
+    name: 'Python',
+    img: pyLogo
+  },{
+    name: 'Php',
+    img: phpLogo
+  },{
+    name: 'Design / UX-UI / Atomic',
+    img: deisgnLogo
+  },{
+    name: 'Figma',
+    img: figmaLogo
+  },{
+    name: 'Adobe suite',
+    img: adobeLogo
+  },
+
+  ]
 </script>
 
 <!-- markup (zero or more items) goes here -->
@@ -56,13 +122,29 @@
           Subtitle={cards.sub}
           imgCard={cards.img}
           linkProject={cards.link}
+          cardWith={''}
         />
       {/each}
       <div class="sect__boxCard">
-        <CardProject titleCard={"TattooExplore / TFE "} Subtitle={'TFE - HEAJ'} imgCard={TFEImg} cardWith={window.innerWidth <= 600 ? '80vw': '40vw'} linkProject={'http://antoni-dumont.be/projets/tfe'} />
+        <!-- {#if window.innerWidth >= 600}
+        <CardProject titleCard={"TattooExplore / TFE "} Subtitle={'TFE - HEAJ'} imgCard={TFEImg} cardWith={ '40vw'} linkProject={'http://antoni-dumont.be/projets/tfe'} />
+
+        {:else}
+        <CardProject titleCard={"TattooExplore / TFE "} Subtitle={'TFE - HEAJ'} imgCard={TFEImg} cardWith={ '80vw'} linkProject={'http://antoni-dumont.be/projets/tfe'} />
+        {/if} -->
+        
       </div>
     {/if}
   </div>
+
+  {#if techPresence === true}
+
+  <div class="sect__techList">
+    {#each allTechInfo as techs }
+      <TechItem nameLinkImg={techs.name} linkTechImg={techs.img} />
+    {/each}
+  </div>
+  {/if}
 </section>
 
 <style>
@@ -109,6 +191,12 @@
     padding: 0 3vw;
     
   }
+  .sect__techList{
+    width: 100%;display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+    flex-wrap: wrap;
+  }
 
   @media(min-width: 600px){
     .sect {
@@ -130,6 +218,13 @@
     margin: 103px 0 0 calc(-3vw + 0px);
     width: calc(100% + 6vw);
     
+  }
+  .sect__techList{
+    height: 50vh;
+    min-height: 300px;
+    max-height: 400px;
+    column-gap: 1vw;
+    row-gap: 2vh;
   }
   }
 </style>
