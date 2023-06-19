@@ -48,6 +48,7 @@ function viewProject(){
         
 
         &>div{
+            border-bottom: 2px solid #FFBE5C;
             background-color: #FFBE5C;
             transition: 0.4s;
         }
@@ -67,6 +68,7 @@ function viewProject(){
         background-color: #B9B1A6;
         row-gap: 12px;
         border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
         transition: 0.2s;
 
         

@@ -20,7 +20,7 @@
   /* styles go here */
   .home__colGauche {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     position: relative;
     top: 0;
     left: 0;

@@ -15,13 +15,13 @@ export let nameLinkImg;
 <style>
 
 .tech__el{
-    width: 50%;
+    width: 45%;
     height: 60px;
     display: flex;
     flex-direction: row;
     column-gap: 20px;
     color: #000;
-    font-size: 28px;
+    font-size: 18px;
     align-items: center;
     
 }
@@ -32,7 +32,7 @@ export let nameLinkImg;
 @media(min-width: 600px){
     .tech__el{
         width: 30%;
-        
+        font-size: 28px;
     }
 }
 </style>

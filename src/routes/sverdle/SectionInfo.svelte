@@ -164,7 +164,7 @@
     overflow: hidden;
     flex-wrap: wrap;
     column-gap: 1vw;
-    row-gap: 1vh;
+    row-gap: 3vh;
     margin: 103px 0 0 calc(-3vw + 0px);
     width: calc(100% + 6vw);
     
@@ -192,10 +192,13 @@
     
   }
   .sect__techList{
-    width: 100%;display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
     row-gap: 1vh;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media(min-width: 600px){
@@ -221,10 +224,12 @@
   }
   .sect__techList{
     height: 50vh;
+    flex-direction: column;
     min-height: 300px;
     max-height: 400px;
     column-gap: 1vw;
     row-gap: 2vh;
+    justify-content:center;
   }
   }
 </style>
